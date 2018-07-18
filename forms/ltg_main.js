@@ -493,7 +493,7 @@ function saveList(event) {
 	{
 		_message = i18n.getI18NMessage('svy.fr.dlg.name_list') 
 		_answer = globals.svy_mod_dialogs_global_showInputDialog('svy.fr.lbl.excuse_me', _message)
-		/** @type {JSFoundset<db:/svy_framework/nav_print_list>} */
+		/** @type {JSFoundSet<db:/svy_framework/nav_print_list>} */
 		var _fs = databaseManager.getFoundSet(globals.nav_db_framework, 'nav_print_list')
 		_fs.newRecord()
 		globals.ltg_print_list_id = _fs.print_list_id
@@ -562,7 +562,7 @@ function saveList(event) {
  * @properties={typeid:24,uuid:"B6A4B6D9-8E87-4825-B42C-7CC366A0FE13"}
  */
 function loadExisting(event) {
-	/** @type {JSFoundset<db:/svy_framework/nav_print_list>} */
+	/** @type {JSFoundSet<db:/svy_framework/nav_print_list>} */
 	var _fs = databaseManager.getFoundSet(globals.nav_db_framework, 'nav_print_list')
 	_fs.loadAllRecords()
 	if(_fs.getSize() < 1) //there are no record
